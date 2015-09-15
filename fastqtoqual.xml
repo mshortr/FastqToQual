@@ -1,0 +1,29 @@
+<tool id="fastqtoqual" name="Convert Fastq to QUAL" version="0.1.0">
+<description> A tool written in Python that converts Fastq files to QUAL format.
+</description>
+    <requirements>	
+	<requirement type = "package" version = "1.9">numpy</requirement>
+	<requirement type = "package" version = "1.65">biopython</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command interpreter="python">fastqtoqual.py $input1
+    </command>
+    <inputs>
+        <param type="data" name="input1" format="fastq" label = "Input Fastq file"/>
+    </inputs>
+    <outputs>
+        <data name="output1" format="qual" from_work_dir="out.qual" label="Fastq to QUAL conversion on ${input1.name}"/>
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="example.fastq"/>
+            <output name="output1" file="example.qual"/>
+        </test>
+    </tests>
+    <help>
+	This tool converts a Fastq file into a QUAL file.
+</help>
+<citation type="doi">doi: 10.1093/bioinformatics/btp163</citation>
+</tool>
