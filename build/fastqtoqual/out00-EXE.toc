@@ -1,0 +1,9 @@
+('/home/galaxy/galaxy-dist/tools/myTools/FastqToQual/dist/fastqtoqual',
+ True,
+ False,
+ None,
+ None,
+ [],
+ None,
+ False,
+ 1441486429)
